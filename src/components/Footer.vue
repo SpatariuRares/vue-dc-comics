@@ -32,35 +32,24 @@
         </div>
       </div>
     </div>
-    <div id="social">
-      <div class="container">
-        <div class="d-flex justify-content-between">
-          <div id="sing">SING-UP NOW</div>
-          <div id="follow">
-            <p>follow us</p>
-            <div v-for="(social,index) in socials" :key="index">
-              <img :src="require(`../assets/img/${social.path}`)" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Socials/>
   </div>
 </template>
 
 <script>
 import Merchandise from '@/components/Merchandise.vue'
+import Socials from '@/components/Socials.vue'
 import * as Links from '@/assets/data/links.js';
 import * as images from '@/assets/data/images.js';
 export default {
   name: 'Footer',
   components:{
-    Merchandise
+    Merchandise,
+    Socials
   },
   data(){
     return {
       links: Links.footerLinks,
-      images:images.footerImages,
       socials: images.footerSocials,
     }
   }
@@ -73,15 +62,6 @@ export default {
 @import "../style/vars.scss";
 .Footer{
   overflow: hidden;
-}
-.d-flex{
-  display:flex;
-}
-.position-relative{
-  position: relative;
-}
-.justify-content-between{
-  justify-content: space-between
 }
 
 #list{
