@@ -36,12 +36,13 @@ export default {
 @import "../style/mixins.scss";
 @import "../style/vars.scss";
 .container{
-  width:80%;
-  margin:10px auto;
   .row{
     display:flex;
     justify-content:space-between;
-    .col{
+    .col:first-child{
+      padding:20px
+    }
+    .col:last-child{
       @include center("vertical");
       align-items:stretch;
     }
