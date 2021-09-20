@@ -36,7 +36,7 @@ const footerSocials = [
     },
     {
        url: "#",
-        path: "footer-pinteres.png",
+        path: "footer-pinterest.png",
     },
     {
         url: "#",

@@ -45,12 +45,10 @@
       <div class="container">
         <div class="d-flex justify-content-between">
           <div id="sing">SING-UP NOW</div>
-          <div class="d-flex">
-            <div>follow us</div>
+          <div id="follow">
+            <p>follow us</p>
             <div v-for="(social,index) in socials" :key="index">
               <img :src="require(`../assets/img/${social.path}`)" alt="">
-              <!-- :src="require(`../assets/img/${social.path}`)" -->
-               <!-- src="../assets/img/footer-twitter.png" -->
             </div>
           </div>
         </div>
@@ -153,6 +151,18 @@ export default {
     border: 2px solid $primaryBrand;
     color:white;
     font-weight: 700;
+  }
+  #follow{
+    @include center("vertical");
+    div{
+      margin: 0 5px;
+    }
+    p{
+      color:$primaryBrand;
+      text-transform:uppercase;
+      font-weight: 700;
+      padding: 0 20px;
+    }
   }
 }
 </style>
