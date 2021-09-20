@@ -1,15 +1,6 @@
 <template>
   <div class="Footer">
-    <div id="merchandise">
-      <div class="container">
-        <div class="row">
-          <div class="col" v-for="(image,index) in images" :key="index">
-            <img :src="require(`../assets/img/${image.path}`)" alt="">
-            <p> {{image.text}}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Merchandise />
     <div id="list">
       <div class="container">
         <div class="d-flex position-relative">
@@ -58,10 +49,14 @@
 </template>
 
 <script>
+import Merchandise from '@/components/Merchandise.vue'
 import * as Links from '@/assets/data/links.js';
 import * as images from '@/assets/data/images.js';
 export default {
   name: 'Footer',
+  components:{
+    Merchandise
+  },
   data(){
     return {
       links: Links.footerLinks,
@@ -88,25 +83,7 @@ export default {
 .justify-content-between{
   justify-content: space-between
 }
-#merchandise{
-  background-color: $primaryBrand;
-  padding: 40px;
-  .row{
-    display: flex;
-    .col{
-      width: calc(100% / 5);
-      color:white;
-      @include center("vertical");
-      img{
-        width: 50px;
-      }
-      p{
-        margin-left:10px;
-        font-size:1rem;
-      }
-    }
-  }
-}
+
 #list{
   background-image: url("../assets/img/footer-bg.jpg");
   background-size: cover;
