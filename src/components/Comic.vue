@@ -17,19 +17,25 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scope lang="scss">
 @import "../style/mixins.scss";
 @import "../style/vars.scss";
-div {
-    width:100%;
-    img{
+
+#Comic {
+    div {
         width:100%;
-        height:100%;
-        object-fit: cover;
-    
+        aspect-ratio: 1/1;
+        img{
+            width:100%;
+            height:100%;
+            object-fit: cover;
+            object-position: top;
+        }
     }
-}
-p{
-    color: #fff;
+    p{
+        color: #fff;
+        font-size: 0.8em;
+        margin-top: 20px;
+    }
 }
 </style>
