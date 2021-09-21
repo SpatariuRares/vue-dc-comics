@@ -35,47 +35,45 @@ export default {
 <style scoped lang="scss">
 @import "../style/mixins.scss";
 @import "../style/vars.scss";
-.container{
-  .row{
-    display:flex;
-    justify-content:space-between;
-    .col:first-child{
-      padding:20px
-    }
-    .col:last-child{
-      @include center("vertical");
-      align-items:stretch;
-    }
-    ul{
+.row{
+  display:flex;
+  justify-content:space-between;
+  .col:first-child{
+    padding:20px
+  }
+  .col:last-child{
+    @include center("vertical");
+    align-items:stretch;
+  }
+  ul{
+    display: flex;
+    list-style: none;
+    position: relative;
+    li{ 
+      padding: 0 10px;
       display: flex;
-      list-style: none;
-      position: relative;
-      li{ 
-        padding: 0 10px;
+      align-items: stretch;
+      a {
+        text-decoration: none;
+        color:black;
         display: flex;
-        align-items: stretch;
-        a {
-          text-decoration: none;
-          color:black;
-          display: flex;
-          align-items: center;
-          &:hover,
-          &.active{
-            color:$primaryBrand;
-          }
+        align-items: center;
+        &:hover,
+        &.active{
+          color:$primaryBrand;
         }
-        .active{
-          position: relative;
-        }
-        & .active::after{
-          content:"";
-          width:80%;
-          height: 10px;
-          background-color: $primaryBrand;
-          position: absolute;
-          bottom: 0;
-          left: 10%;
-        }
+      }
+      .active{
+        position: relative;
+      }
+      & .active::after{
+        content:"";
+        width:80%;
+        height: 10px;
+        background-color: $primaryBrand;
+        position: absolute;
+        bottom: 0;
+        left: 10%;
       }
     }
   }

@@ -1,17 +1,17 @@
 <template>
-<div id="social">
-    <div class="container">
-        <div class="d-flex justify-content-between">
-            <div id="sing">SING-UP NOW</div>
-            <div id="follow">
-            <p>follow us</p>
-            <div v-for="(social,index) in socials" :key="index">
-                <img :src="require(`../assets/img/${social.path}`)" alt="">
-            </div>
-            </div>
-        </div>
-    </div>
-</div>
+  <div id="social">
+      <div class="container">
+          <div class="d-flex justify-content-between">
+              <div id="sing">SING-UP NOW</div>
+              <div id="follow">
+              <p>follow us</p>
+              <div v-for="(social,index) in socials" :key="index">
+                  <img :src="require(`../assets/img/${social.path}`)" alt="">
+              </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </template>
 
 <script>

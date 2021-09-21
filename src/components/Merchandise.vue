@@ -3,8 +3,8 @@
         <div class="container">
         <div class="row">
             <div class="col" v-for="(image,index) in images" :key="index">
-            <img :src="require(`../assets/img/${image.path}`)" alt="">
-            <p> {{image.text}}</p>
+              <img :src="require(`../assets/img/${image.path}`)" alt="">
+              <p> {{image.text}}</p>
             </div>
         </div>
         </div>

@@ -4,7 +4,7 @@
     <div id="list">
       <div class="container">
         <div class="d-flex position-relative">
-          <div class="row">
+          <div class="d-flex">
             <div>
               <ul>
                 <li class="title"> <h3>DC COMICS</h3></li>
@@ -69,8 +69,6 @@ export default {
   background-size: cover;
   padding: 30px;
   overflow: hidden;
-  .row{
-    display:flex;
     .col{
       @include center("vertical");
       align-items:stretch;
@@ -93,7 +91,6 @@ export default {
         }
       }
     }
-  }
   img {
     position: absolute;
     right: 0;
